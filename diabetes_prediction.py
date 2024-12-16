@@ -40,13 +40,13 @@ if st.button('Check If Your Diabetic'):
 
     user_input = [float(x) for x in user_input]
 
-    # user_input_numpy_array = np.asarray(user_input)    
+    user_input_numpy_array = np.asarray(user_input)    
     
-    # reshaped_data = user_input_numpy_array.reshape(1,-1)
+    reshaped_data = user_input_numpy_array.reshape(1,-1)
     
     # standardized_data = scaler.fit_transform(reshaped_data)
 
-    Diabetes_prediction = diabetes_prediction_model.predict(user_input)
+    Diabetes_prediction = diabetes_prediction_model.predict(reshaped_data)
 
     if Diabetes_prediction[0] == 1:
         Diabetes_diagnosis = "You are Diabetic"

@@ -10,7 +10,7 @@ import streamlit as st
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-diabetes_prediction_model = pickle.load(open('diabetes_prediction.sav','rb'))
+diabetes_prediction_model = pickle.load(open('diabetes_model.sav','rb'))
 
 st.title('Diabetes Prediction')
 
